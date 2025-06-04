@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/main.css">
+    <title>EveryPal | Welcome</title>
+  </head>
+  <body>
+    <div class="overlay">&nbsp;</div>
+    <header>
+      <div class="container">
+        <div class="header">
+          <img src="./assets/images/logo.png" width="150" alt="logo">
+          <!-- <span class="mobile-btn hamburger">
+            <img src="./assets/icons/menu.svg" alt="menu">
+          </span>
+          <span class="mobile-btn close d-none">
+            <img src="./assets/icons/x.svg" alt="close">
+          </span>
+          <nav class="mobile-menu">
+            <ul class="primary">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </nav> -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="intro">
+          <div class="intro_text pa-5">
+            <h1>Welcome to Everypal</h1>
+            <p>EveryPal is a place where anyone can share their opinions on everything from topics they are interested in with people from all over the world</p>
+            <a href="https://apps.apple.com/us/app/everypal/id6502282448" tabIndex="0"><img class="app_store_btn" src="./assets/icons/app_store_btn.svg"alt="bn45"/></a>
+            <a href="/" tabIndex="0"><img class="play_store_btn" src="./assets/icons/play_store_btn.svg" alt="bn45"/></a>
+          </div>
+          <div class="intro_img">
+            <img src="./assets/images/mock_up.png" class="mockups" alt="mockups" />
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="features">
+          <div class="features_text pa-5">
+            <h2>Why choose EveryPal?</h2>
+            <p>EveryPal is a social platform where you can freely express your thoughts, share your daily life, and interact with various communities. It enables communication across different languages, races, and cultures, connecting people with similar interests.</p>
+          </div>
+          <div class="features_body pa-5">
+            <div class="features_card">
+              <img src="./assets/images/global.png" width="100" alt="image here">
+              <h3>Global Friends</h3>
+              <p>Connect with people across languages, races, and cultures, fostering a global conversation.</p>
+            </div>
+            <div class="features_card">
+              <img src="./assets/images/express.png" width="100" alt="image here">
+              <h3>Expression yourself</h3>
+              <p>Share your interests and daily life freely, expressing your thoughts openly and engaging with a diverse audience.</p>
+            </div>
+            <div class="features_card">
+              <img src="./assets/images/connection.png" width="100" alt="image here">
+              <h3>Community Connection</h3>
+              <p>Engage with like-minded individuals, sharing and interacting with people who have similar interests and passions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer pa-5">
+      <div class="footer_intro">
+        <img src="./assets/images/logo_dark.png" width="150" class="footer_logo" alt="image here">
+      </div>
+      <div class="footer_links">
+        <ul>
+          <li><a href="https://everypal.site/terms">Terms and uses</a></li>
+          <li><a href="https://everypal.site/policy">Privacy Policy</a></li>
+          <li><a href="https://everypal.site/csae">CSAE Policy</a></li>
+          <li>Contact</li>
+          <li>everypal.contact@gmail.com</li>
+        </ul>
+      </div>
+      <div class="footer_last">
+        <a href="https://apps.apple.com/us/app/everypal/id6502282448" tabIndex="0"><img class="app_store_btn" src="./assets/icons/app_store_btn.svg"alt="bn45"/></a>
+        <a href="/" tabIndex="0"><img class="play_store_btn" src="./assets/icons/play_store_btn.svg" alt="bn45"/></a>
+        <p>&copy;2024 EveryPal. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      var ham = document.querySelector('.hamburger')
+      var close = document.querySelector('.close')
+      var nav = document.querySelector('nav')
+      var overlay = document.querySelector('.overlay')
+      overlay.style.zIndex = "-1";
+
+    ham.addEventListener("click", () => {
+        nav.classList.remove("mobile-menu");
+        nav.classList.add("mobile-menu-in");
+        overlay.style.opacity = "1";
+        // overlay.style.display = "block"
+        // ham.style.display = "none";
+        close.classList.remove('d-none');
+        ham.classList.add('d-none');
+        overlay.style.zIndex = "10";
+    })
+
+    close.addEventListener("click", () => {
+        nav.classList.add("mobile-menu");
+        nav.classList.remove("mobile-menu-in");
+        overlay.style.opacity = "0";
+        // overlay.style.display = "none";
+        // ham.style.display = "block";
+        close.classList.add('d-none');
+        ham.classList.remove('d-none');
+    })
+    </script>
+  </body>
+</html>
